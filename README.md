@@ -85,7 +85,7 @@ trained using the object models accumulated using our method.
 
 Visualization of instance detection and segmentation.
 
-<img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_benchmark_20180519_040732.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_krish_20180519_040639.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_itemdata_20180519_040543" width="30%" />
+<img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_benchmark_20180519_040732.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_krish_20180519_040639.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_itemdata_20180519_040543.jpg" width="30%" />
 
 
 
