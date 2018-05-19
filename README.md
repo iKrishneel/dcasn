@@ -39,7 +39,7 @@ Coming soon
 
 Videos
 ------------
-
+You can view the videos of our results [here](https://drive.google.com/open?id=0B5hRAGKTOm_KNUV4R3lkTzVHY1U)
 
 Semantic Segmentation
 ------------
