@@ -25,8 +25,9 @@ Downloading the Package
 ------------
 ```bash
 $ git clone https://github.com/iKrishneel/dcasn.git
-$ cd dcasn
+$ cd dcasn/handheld_object_segmentation
 $ git pull --all
+$ catkin build handheld_object_segmentation
 ```
 
 Handheld Object Dataset
