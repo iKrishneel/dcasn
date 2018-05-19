@@ -48,6 +48,16 @@ Detection Results
 [FCN](https://github.com/shelhamer/fcn.berkeleyvision.org) network for
 semantic segmentation.
 
+```bash
+Accuracy: 58.3322
+AccClass: 51.5735
+Mean IoU: 30.5808
+Fwav Acc: 45.7364
+```
+
+Training 
+
+
 2. We also used the accumulated models to train object detector using
 [Mask RCNN](https://github.com/matterport/Mask_RCNN) for instance
 segmentation. 
