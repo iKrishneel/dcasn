@@ -1,0 +1,3 @@
+[submodule "handheld_object_segmentation/scripts/data_argumentation_layer/imgaug"]
+	path = handheld_object_segmentation/scripts/data_argumentation_layer/imgaug
+	url = https://github.com/aleju/imgaug
