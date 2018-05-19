@@ -44,9 +44,9 @@ Videos
 Detection Results
 ------------
 
-1. **We used the accumulated object models to train**
+1. **We used the accumulated object models to train
 [FCN](https://github.com/shelhamer/fcn.berkeleyvision.org) network for
-semantic segmentation.
+semantic segmentation.**
 
 Plot showing the performace of FCN trained using our models and the
 benchmark FCN trained using the manually annotated ground truth
