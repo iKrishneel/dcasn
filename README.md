@@ -60,6 +60,7 @@ datasets
 
 The training and validation plot of FCN trained using the models
 accumulated using our models.
+
 ![](assets/arc/fcn_train.png)
 ------------
 
