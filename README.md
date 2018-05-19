@@ -41,6 +41,7 @@ Coming soon
 Videos
 ------------
 You can view the full videos of our results [here](https://drive.google.com/open?id=0B5hRAGKTOm_KNUV4R3lkTzVHY1U)
+The green bounding box shows the bounding box level annotation and the mask image on the right shows the pixel-wise annotations. The algorithm runs in real-time on Nvidia Titan X GPU.
 
 <img src="assets/videos/tshirt1.gif" width="280" /> <img src="assets/videos/tshirt2.gif" width="280" /> <img src="assets/videos/umbrella.gif" width="280"  />
 <img src="assets/videos/banana.gif" width="280" /> <img src="assets/videos/file.gif" width="280" /> <img src="assets/videos/onion.gif" width="280"  />
