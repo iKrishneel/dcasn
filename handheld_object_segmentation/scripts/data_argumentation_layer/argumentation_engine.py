@@ -42,7 +42,6 @@ class ArgumentationEngine(object):
 
         im_rgb = self.demean_rgb_image(im_rgb)
         im_dep = im_dep.astype(np.float32)
-        # im_dep /= im_dep.max()  ## >> no global only local normalization for depth
         
         return self.generate_argumented_data(im_rgb, im_dep, im_mask, is_templ)
 
@@ -112,12 +111,6 @@ class ArgumentationEngine(object):
         rgb1, dep1, mask1 = self.crop_and_resize_inputs(im_rgb, im_dep, im_mask, box, True)
         rgb1 = self.color_space_argumentation(rgb1)
         
-        #####
-        ## ToDo: color space argumentation
-        ####
-
-            
-
         tgt_datum = self.pack_array(rgb1, dep1, mask1)
 
         #! pack mask label in 4D
@@ -127,21 +120,6 @@ class ArgumentationEngine(object):
         
         #! for softmaxloss
         mask_datum = mask_datum.astype(np.uint8)
-
-
-        
-        ##################################
-        # cv.rectangle(im_rgb, (int(x), int(y)), (int(x+w), int(y+h)), (0, 0, 255), 3)
-        # x,y,w,h = rect
-        # cv.rectangle(im_rgb, (int(x), int(y)), (int(x+w), int(y+h)), (0, 255, 0), 3)
-        # mask1 = mask_datum[0].copy()
-        # mask1 = mask1.swapaxes(0, 1)
-        
-        # z = np.hstack((rgb1, dep1))
-        # cv.namedWindow('img', cv.WINDOW_NORMAL)
-        # cv.imshow('img', z)
-        # cv.waitKey(3 )
-        ##################################
         
         return (target_datum, mask_datum)        
 
