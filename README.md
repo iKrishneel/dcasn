@@ -54,11 +54,10 @@ datasets
 
 ![](assets/arc/apc_accuracy.png)
 
-**Training Plot**
+**Training and Validation Plots**
 The training and validation plot of FCN trained using the models
 accumulated using our models.
-![](assets/arc/fcn_train.png)
-
+![](assets/arc/fcn_train.png){:height="50%" width="50%"}
 
 
 2. We also used the accumulated models to train object detector using
