@@ -54,11 +54,15 @@ datasets
 
 <img src="assets/arc/apc_accuracy.png" width="50%" height="50%"/>
 
+------------
+
 **Training and Validation Plots**
 The training and validation plot of FCN trained using the models
 accumulated using our models.
 ![](assets/arc/fcn_train.png)
 
+
+------------
 
 2. We also used the accumulated models to train object detector using
 [Mask RCNN](https://github.com/matterport/Mask_RCNN) for instance
