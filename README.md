@@ -55,7 +55,10 @@ Mean IoU: 30.5808
 Fwav Acc: 45.7364
 ```
 
-Training 
+**Training Plot**
+
+![](assets/arc/fcn_train.png)
+
 
 
 2. We also used the accumulated models to train object detector using
