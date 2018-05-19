@@ -53,14 +53,12 @@ benchmark FCN trained using the manually annotated ground truth
 datasets
 
 <img src="assets/arc/apc_accuracy.png" width="50%" height="50%"/>
-
 ------------
 
 **Training and Validation Plots**
 The training and validation plot of FCN trained using the models
 accumulated using our models.
 ![](assets/arc/fcn_train.png)
-
 ------------
 
 Visualization of the cluttered bin segmentation task.
