@@ -43,7 +43,6 @@ Videos
 
 Detection Results
 ------------
-~~~
 
 1. We used the accumulated object models to train
 [FCN](https://github.com/shelhamer/fcn.berkeleyvision.org) network for
@@ -53,7 +52,6 @@ semantic segmentation.
 [Mask RCNN] (https://github.com/matterport/Mask_RCNN) for instance
 segmentation. 
 
-~~~
 
 
 
