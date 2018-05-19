@@ -1,0 +1,20 @@
+<launch>
+  <arg name="image" default="/camera/rgb/image_rect_color" />
+  <arg name="depth" default="/camera/depth_registered/image_raw" />
+  <arg name="rect" default="$(arg image)/screenrectangle" />  
+
+  <arg name="pretrained_weights" default="$(find handheld_object_segmentation)/models/snapshot_iter_100000.caffemodel" />
+  <arg name="deployment_prototxt" default="$(find handheld_object_segmentation)/models/deploy.prototxt" />
+  
+ <node pkg="handheld_object_segmentation" type="handheld_object_tracking.py"
+       name="handheld_object_tracking" output="screen" >
+   <remap from="image" to="$(arg image)" />
+   <remap from="depth" to="$(arg depth)" />
+   <remap from="rect" to="$(arg rect)"/>
+
+   <param name="pretrained_weights" value="$(arg pretrained_weights)" />
+   <param name="deployment_prototxt" value="$(arg deployment_prototxt)" />
+ </node>
+
+
+</launch>
