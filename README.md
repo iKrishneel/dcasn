@@ -70,7 +70,7 @@ Visualization of the cluttered bin segmentation task.
 
 **2. We also used the accumulated models to train object detector using
 [Mask RCNN](https://github.com/matterport/Mask_RCNN) for instance
-segmentation. **
+segmentation.**
 
 Plot showing the training loss and accuracy of Mask RCNN detector
 trained using the object models accumulated using our method.
