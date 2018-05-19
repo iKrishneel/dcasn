@@ -85,7 +85,7 @@ trained using the object models accumulated using our method.
 
 Visualization of instance detection and segmentation.
 
-<img src="readme/view_arc2017_instance_segmentation_dataset.jpg" width="30%" /> <img src="readme/view_krish_arc2017_instance_segmentation_dataset.jpg" width="30%" /> <img src="readme/view_itemdata_arc2017_instance_segmentation_dataset.jpg" width="30%" />
+<img src="assets/mask-rcnn/readme/view_arc2017_instance_segmentation_dataset.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/view_krish_arc2017_instance_segmentation_dataset.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/view_itemdata_arc2017_instance_segmentation_dataset.jpg" width="30%" />
 
 
 
