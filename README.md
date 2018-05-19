@@ -48,6 +48,27 @@ The green bounding box shows the bounding box level annotation and the mask imag
 <img src="assets/videos/kleenex.gif" width="280" /> <img src="assets/videos/pillow.gif" width="280" /> <img src="assets/videos/plastic.gif" width="280" />
 
 
+------------
+
+
+Instance Segmentation using Mask R-CNN
+------------
+
+**We also used the accumulated models to train object detector using
+[Mask RCNN](https://github.com/matterport/Mask_RCNN) for instance
+segmentation.**
+
+Plot showing the training loss and accuracy of Mask RCNN detector
+trained using the object models accumulated using our method.
+
+<img src="assets/mask-rcnn/accuracy.png" width="49%"/> <img src="assets/mask-rcnn/loss.png" width="49%" /> 
+
+Visualization of instance detection and segmentation.
+
+<img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_benchmark_20180519_040732.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_krish_20180519_040639.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_itemdata_20180519_040543.jpg" width="30%" />
+
+
+
 Semantic Segmentation
 ------------
 
@@ -73,26 +94,4 @@ accumulated using our models.
 
 Visualization of the cluttered bin segmentation task.
 <img src="assets/arc/fcn_result.jpg" width="100%" height="100%"/>
-
-
-------------
-
-
-Instance Segmentation using Mask R-CNN
-------------
-
-**We also used the accumulated models to train object detector using
-[Mask RCNN](https://github.com/matterport/Mask_RCNN) for instance
-segmentation.**
-
-Plot showing the training loss and accuracy of Mask RCNN detector
-trained using the object models accumulated using our method.
-
-<img src="assets/mask-rcnn/accuracy.png" width="49%"/> <img src="assets/mask-rcnn/loss.png" width="49%" /> 
-
-Visualization of instance detection and segmentation.
-
-<img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_benchmark_20180519_040732.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_krish_20180519_040639.jpg" width="30%" /> <img src="assets/mask-rcnn/readme/mask_rcnn_resnet50_dataset_itemdata_20180519_040543.jpg" width="30%" />
-
-
 
