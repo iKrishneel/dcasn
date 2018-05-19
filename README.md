@@ -61,6 +61,10 @@ The training and validation plot of FCN trained using the models
 accumulated using our models.
 ![](assets/arc/fcn_train.png)
 
+------------
+
+Visualization of the cluttered bin segmentation task.
+<img src="assets/arc/fcn_result.jpg" width="100%" height="100%"/>
 
 ------------
 
