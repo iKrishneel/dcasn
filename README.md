@@ -41,7 +41,9 @@ Videos
 ------------
 You can view the full videos of our results [here](https://drive.google.com/open?id=0B5hRAGKTOm_KNUV4R3lkTzVHY1U)
 
-<img src="assets/videos/banana.gif" width="270" /> <img src="assets/videos/file.gif" width="270" /> <img src="assets/videos/onion.gif" width="270"  />
+<img src="assets/videos/tshirt1.gif" width="280" /> <img src="assets/videos/umbrella.gif" width="280" /> <img src="assets/videos/pillow.gif" width="280"  />
+<img src="assets/videos/banana.gif" width="280" /> <img src="assets/videos/file.gif" width="280" /> <img src="assets/videos/onion.gif" width="280"  />
+<img src="assets/videos/kleenex.gif" width="280" />
 
 
 Semantic Segmentation
