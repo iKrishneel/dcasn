@@ -5,6 +5,11 @@ import random
 import numpy as np
 import cv2 as cv
 
+import imgaug.imgaug as ia
+import imgaug.imgaug
+import imgaug.imgaug.augmenters as iaa
+
+
 (CV_MAJOR, CV_MINOR, _) = cv.__version__.split(".")
 
 class ArgumentationEngine(object):
@@ -253,119 +258,18 @@ class ArgumentationEngine(object):
 
         return (mask, rect)
 
-
-
-
-# direct = '/home/krishneel/Documents/datasets/handheld_objects/'
-# # im_rgb = cv.imread(direct + 'image/00000000.jpg')
-# # im_dep = cv.imread(direct + 'depth/00000000.jpg')
-# # im_mask = cv.imread(direct + 'mask/00000000.jpg')
-
-# # print im_rgb.shape, im_dep.shape, im_mask.shape
-
-# # ae = ArgumentationEngine(227, 227)
-# # ae.process2(im_rgb, im_dep, im_mask)
-
-# import os
-
-# def read_textfile(filename):
-#     lines = [line.rstrip('\n')                                                                                              
-#              for line in open(filename)                                                                             
-#     ]
-#     return np.array(lines)
-
-
-# def read_images(**kwargs):
-#     im_rgb = cv.imread(kwargs['image'], cv.IMREAD_COLOR)
-#     im_dep = cv.imread(kwargs['depth'], cv.IMREAD_ANYCOLOR)
-#     im_mask = cv.imread(kwargs['mask'], cv.IMREAD_COLOR)
-#     return im_rgb, im_dep, im_mask
-
-# train_fn = 'train.txt'
-# objects = read_textfile(os.path.join(direct, 'objects.txt'))
-
-# dataset = {}
-
-# for obj in objects:    
-#     fn = os.path.join(direct, os.path.join(obj, train_fn))
-#     if not os.path.isfile(fn):
-#         raise Exception('Missing dataset train.txt')
-    
-#     lines = read_textfile(fn)
-
-#     datas = []
-#     for index, line in enumerate(lines):
-#         if index % 3 == 0:
-#             datas.append({
-#                 'image': lines[index].split()[0],
-#                 'depth' : lines[index+1].split()[0],
-#                 'mask' :lines[index+2].split()[0]
-#             })
-
-#     dataset[str(obj)] = np.array(datas)
-
-
-# def fetch_data_once():
-#     t_rnd = random.randint(0, objects.shape[0] - 1)
-#     s_rnd = random.randint(0, objects.shape[0] - 1)
-
-#     label = 1 if t_rnd is s_rnd else 0
-    
-#     t_key = objects[t_rnd]
-#     s_key = objects[s_rnd]
-
-#     t_rnd = random.randint(0, (dataset[t_key].shape[0]) - 1)
-#     s_rnd = t_rnd
-    
-#     if label:
-#         s_rnd = t_rnd + 1 if t_rnd is 0 else t_rnd - 1
-#     else:
-#         s_rnd = random.randint(0, (dataset[s_key].shape[0]) - 1)
-
-#     return (t_key, t_rnd, s_key, s_rnd)
-    
-
-# ae = ArgumentationEngine(227, 227)
-
-# for i in xrange(0, 100, 1):
-#     """
-#     t_rnd = random.randint(0, objects.shape[0] - 1)
-#     s_rnd = random.randint(0, objects.shape[0] - 1)
-
-#     label = 1 if t_rnd is s_rnd else 0
-    
-#     t_key = objects[t_rnd]
-#     s_key = objects[s_rnd]
-
-#     t_rnd = random.randint(0, (dataset[t_key].shape[0]) - 1)
-#     s_rnd = t_rnd
-    
-#     if label:
-#         s_rnd = t_rnd + 1 if t_rnd is 0 else t_rnd - 1
-#     else:
-#         s_rnd = random.randint(0, (dataset[s_key].shape[0]) - 1)
-#     """
-
-
-    
-#     t_key, t_rnd, s_key, s_rnd = fetch_data_once()
-    
-#     templ_data = dataset[t_key][t_rnd]
-#     src_data = dataset[s_key][s_rnd]
-
-#     im_trgb, im_tdep, im_tmask = read_images(**templ_data)
-#     im_srgb, im_sdep, im_smask = read_images(**src_data)
-
-#     # ae.process2(im_trgb, im_tdep, im_tmask)
-
-#     while True:
-#         src_datum, mask_datum = ae.process2(im_srgb, im_sdep, im_smask, False)
-#         if not src_datum is None:
-#             break
-#         else:
-#             print "None Detected"
-#             _, _, s_key, s_rnd = fetch_data_once()
-#             src_data = dataset[s_key][s_rnd]
-#             im_srgb, im_sdep, im_smask = read_images(**src_data)
-        
-#     print "DONE:", src_datum.shape
+    def color_space_argumentation(self, image):
+        seq = iaa.Sequential([
+            iaa.OneOf([
+                iaa.GaussianBlur((0, 3.0)),
+                iaa.AverageBlur(k=(2, 7)),
+                iaa.MedianBlur(k=(3, 7)),
+            ]),
+            iaa.Sharpen(alpha=(0, 1.0), lightness=(0.75, 1.5)),
+            iaa.Add((-2, 21), per_channel=0.5),
+            iaa.Multiply((0.75, 1.25), per_channel=0.5),
+            # iaa.ContrastNormalization((0.5, 1.50), per_channel=0.5),
+            iaa.Grayscale(alpha=(0.0, 0.50)),
+        ],
+                             random_order=False)
+        return seq.augment_image(image)
