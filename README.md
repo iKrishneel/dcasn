@@ -44,7 +44,7 @@ Videos
 Detection Results
 ------------
 
-1. **We used the accumulated object models to train
+**1. We used the accumulated object models to train
 [FCN](https://github.com/shelhamer/fcn.berkeleyvision.org) network for
 semantic segmentation.**
 
@@ -68,9 +68,15 @@ Visualization of the cluttered bin segmentation task.
 
 ------------
 
-2. We also used the accumulated models to train object detector using
+**2. We also used the accumulated models to train object detector using
 [Mask RCNN](https://github.com/matterport/Mask_RCNN) for instance
-segmentation. 
+segmentation. **
+
+Plot showing the training loss and accuracy of Mask RCNN detector
+trained using the object models accumulated using our method.
+
+<img src="assets/mask-rcnn/accuracy.png" width="50%" height="50%"/>
+<img src="assets/mask-rcnn/loss.png" width="50%" height="50%"/>
 
 
 
