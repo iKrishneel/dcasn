@@ -53,6 +53,7 @@ benchmark FCN trained using the manually annotated ground truth
 datasets
 
 <img src="assets/arc/apc_accuracy.png" width="50%" height="50%"/>
+
 ------------
 
 **Training and Validation Plots**
