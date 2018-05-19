@@ -83,7 +83,9 @@ trained using the object models accumulated using our method.
 
 <img src="assets/mask-rcnn/accuracy.png" width="49%"/> <img src="assets/mask-rcnn/loss.png" width="49%" /> 
 
+Visualization of instance detection and segmentation.
 
+<img src="readme/view_arc2017_instance_segmentation_dataset.jpg" width="30%" /> <img src="readme/view_krish_arc2017_instance_segmentation_dataset.jpg" width="30%" /> <img src="readme/view_itemdata_arc2017_instance_segmentation_dataset.jpg" width="30%" />
 
 
 
