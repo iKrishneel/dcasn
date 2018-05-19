@@ -48,15 +48,15 @@ Detection Results
 [FCN](https://github.com/shelhamer/fcn.berkeleyvision.org) network for
 semantic segmentation.
 
-```bash
-Accuracy: 58.3322
-AccClass: 51.5735
-Mean IoU: 30.5808
-Fwav Acc: 45.7364
-```
+Plot showing the performace of FCN trained using our models and the
+benchmark FCN trained using the manually annotated ground truth
+datasets
+
+![](assets/arc/apc_accuracy.png)
 
 **Training Plot**
-
+The training and validation plot of FCN trained using the models
+accumulated using our models.
 ![](assets/arc/fcn_train.png)
 
 
