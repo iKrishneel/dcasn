@@ -73,6 +73,7 @@ class ArgumentationEngine(object):
             s = self.__scales[sindx]
             bbox = self.get_region_bbox(im_rgb, rect, s)
             rgb, dep, mask = self.crop_and_resize_inputs(im_rgb, im_dep, im_mask, bbox, True)
+            rgb = self.color_space_argumentation(rgb)
             
             templ_datum = self.pack_array(rgb, dep)
             return templ_datum, _
@@ -109,7 +110,8 @@ class ArgumentationEngine(object):
         box[1] = y
             
         rgb1, dep1, mask1 = self.crop_and_resize_inputs(im_rgb, im_dep, im_mask, box, True)
-
+        rgb1 = self.color_space_argumentation(rgb1)
+        
         #####
         ## ToDo: color space argumentation
         ####
