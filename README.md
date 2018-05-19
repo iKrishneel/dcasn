@@ -52,12 +52,12 @@ Plot showing the performace of FCN trained using our models and the
 benchmark FCN trained using the manually annotated ground truth
 datasets
 
-![](assets/arc/apc_accuracy.png)
+<img src="assets/arc/apc_accuracy.png" width="50%" height="50%"/>
 
 **Training and Validation Plots**
 The training and validation plot of FCN trained using the models
 accumulated using our models.
-![](assets/arc/fcn_train.png height="50%" width="50%")
+![](assets/arc/fcn_train.png)
 
 
 2. We also used the accumulated models to train object detector using
