@@ -75,8 +75,8 @@ segmentation. **
 Plot showing the training loss and accuracy of Mask RCNN detector
 trained using the object models accumulated using our method.
 
-<img src="assets/mask-rcnn/accuracy.png" width="50%" height="50%"/>
-<img src="assets/mask-rcnn/loss.png" width="50%" height="50%"/>
+<img src="assets/mask-rcnn/accuracy.png" width="48%" height="50%"/>
+<img src="assets/mask-rcnn/loss.png" width="48%" height="50%"/>
 
 
 
