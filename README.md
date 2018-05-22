@@ -45,7 +45,7 @@ The green bounding box shows the bounding box level annotation and the mask imag
 
 <img src="assets/videos/tshirt1.gif" width="280" /> <img src="assets/videos/tshirt2.gif" width="280" /> <img src="assets/videos/umbrella.gif" width="280"  />
 <img src="assets/videos/banana.gif" width="280" /> <img src="assets/videos/file.gif" width="280" /> <img src="assets/videos/onion.gif" width="280"  />
-<img src="assets/videos/kleenex.gif" width="280" /> <img src="assets/videos/pillow.gif" width="280" /> <img src="assets/videos/plastic.gif" width="280" />
+<img src="assets/videos/kleenex.gif" width="280" /> <img src="assets/videos/white-case.gif" width="280" /> <img src="assets/videos/plastic.gif" width="280" />
 
 
 ------------
