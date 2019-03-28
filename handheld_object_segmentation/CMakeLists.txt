@@ -19,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(OpenCV REQUIRED)
-find_package(PCL 1.8 REQUIRED)
+# find_package(PCL 1.8 REQUIRED)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11 -Wextra -pedantic -O3 -Wno-long-long -fno-omit-frame-pointer -ftree-vectorize")
 
@@ -129,12 +129,12 @@ catkin_python_setup()
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES handheld_object_segmentation
-  CATKIN_DEPENDS cv_bridge roscpp rospy
-  DEPENDS system_lib
-)
+# catkin_package(
+#   INCLUDE_DIRS include
+#   LIBRARIES handheld_object_segmentation
+#   CATKIN_DEPENDS cv_bridge roscpp rospy
+#   DEPENDS system_lib
+# )
 
 ###########
 ## Build ##
@@ -143,13 +143,13 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
-include_directories(
-  include ${catkin_INCLUDE_DIRS}
-)
+# include_directories(
+#   include ${catkin_INCLUDE_DIRS}
+# )
 
-include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})
-add_definitions(${PCL_DEFINITIONS})
+# include_directories(${PCL_INCLUDE_DIRS})
+# link_directories(${PCL_LIBRARY_DIRS})
+# add_definitions(${PCL_DEFINITIONS})
 
 ## Declare a C++ library
 # add_library(handheld_object_segmentation
@@ -162,18 +162,18 @@ add_definitions(${PCL_DEFINITIONS})
 # add_dependencies(handheld_object_segmentation ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-add_executable(handheld_object_registration src/handheld_object_registration.cpp)
+# add_executable(handheld_object_registration src/handheld_object_registration.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(handheld_object_segmentation_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(handheld_object_registration
-   ${catkin_LIBRARIES}
-   ${PCL_LIBRARIES} 
-   ${OpenCV_LIBS}
-   )
+# target_link_libraries(handheld_object_registration
+#    ${catkin_LIBRARIES}
+#    ${PCL_LIBRARIES} 
+#    ${OpenCV_LIBS}
+#    )
 
 #############
 ## Install ##
